@@ -44,6 +44,8 @@ class MainWindow(QMainWindow,Ui_MainWindow):
 		self.setWindowIcon(QIcon("logo.png"))
 		self.changeFormula.clicked.connect(self.changeMaker)
 		self.makePassword.clicked.connect(self.outputPassword)
+		self.copy.clicked.connect(self.copyPassword)
+		self.importFormula.clicked.connect(self.importMaker)
 		self.zh_cn.triggered.connect(functools.partial(self.changeLang,"zh_cn"))
 		self.en.triggered.connect(functools.partial(self.changeLang,"en"))
 
@@ -54,6 +56,11 @@ class MainWindow(QMainWindow,Ui_MainWindow):
 						 ,"NB":self.hasNumber.isChecked()
 						 ,"SB":self.hasSymbol.isChecked()},self.chooseComplexity.value())
 		self.showPassword.setText(psw)
+
+	def copyPassword(self):
+		clipboard=QApplication.clipboard()
+		print(self.showPassword.text())
+		clipboard.setText(self.showPassword.text())
 	
 	def changeMaker(self):
 		reply=QMessageBox.warning(self,_tr("Change formula"),_tr("Are you sure?"),QMessageBox.Yes|QMessageBox.No)
@@ -63,6 +70,14 @@ class MainWindow(QMainWindow,Ui_MainWindow):
 			formula["LL"]=resort(formula["LL"])
 			formula["NB"]=resort(formula["NB"])
 			formula["SB"]=resort(formula["SB"])
+			self.outputPassword()
+
+	def importMaker(self):
+		fname,reply=QFileDialog.getOpenFileName(self,_tr("Import formula"),".","JSON Files (*.json)")
+		if reply:
+			global formula
+			f=open(fname,"r")
+			formula=json.load(f)
 			self.outputPassword()
 	
 	def closeEvent(self,QCloseEvent):

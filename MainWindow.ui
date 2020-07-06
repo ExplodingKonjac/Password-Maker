@@ -87,7 +87,7 @@
      <rect>
       <x>50</x>
       <y>400</y>
-      <width>700</width>
+      <width>590</width>
       <height>50</height>
      </rect>
     </property>
@@ -99,6 +99,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -132,9 +135,9 @@
    <widget class="QPushButton" name="changeFormula">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>50</x>
       <y>480</y>
-      <width>360</width>
+      <width>330</width>
       <height>50</height>
      </rect>
     </property>
@@ -278,6 +281,47 @@
     </property>
     <property name="indent">
      <number>0</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="copy">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>400</y>
+      <width>90</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Copy</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="importFormula">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>480</y>
+      <width>330</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Import formula</string>
     </property>
    </widget>
   </widget>

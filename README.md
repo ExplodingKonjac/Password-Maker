@@ -8,7 +8,7 @@ This app will make a password for you by the name of the website, and I'm sure t
 
 ## How to use
 
-Download the zip, and run "Password Maker" or "main.exe".
+Download the zip, and run "Password Maker.exe".
 
 ## Tips
 

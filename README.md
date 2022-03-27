@@ -6,7 +6,7 @@ Did you use to forget your password?
 
 **And now you will never again!**
 
-This app will make a password for you by a simple keyword with is provided by yourself, and I'm sure that your password is unique and strong enough!
+This app will make a password for you by a simple keyword which is provided by yourself, and I'm sure that your password is unique and strong enough!
 
 ## How to use
 

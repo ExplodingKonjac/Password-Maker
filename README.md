@@ -15,5 +15,4 @@ Download the zip, and run "Password Maker.exe".
 ## Tips
 
 * Only allowed to use in windows system.
-* 
 * For safety reasons, this project is not opensource.
